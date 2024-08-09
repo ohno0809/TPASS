@@ -1,67 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPASS使用者問卷調查</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #02C874;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        h2, h3 {
+            color: #02C874;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.4rem;
+            margin: 10px 0;
+        }
+        .Preface {
+            border-left: 4px solid #02C874;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        .link p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .link a {
+            color: #02C874;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #02C874;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2, h3 {
+                font-size: 1.2rem;
+            }
+            p, .link p {
+                font-size: 0.9rem;
+            }
+            th, td {
+                padding: 8px;
+            }
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+            .Preface {
+                padding-left: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-    <h1>TPASS使用者問卷調查</h1>
+        <h1>TPASS使用者問卷調查</h1>
     </header>   
 
     <main>
-    <section class="Preface">
-    <p >請根據居住地選擇問卷，若該居住地已達成調查份數，則問卷將顯示”已額滿”並無法填寫，數量有限，</p> 
-    </section>
+        <section class="Preface">
+            <p>親愛的先生/女士：
+            <br>
+                「TPASS行政院通勤月票」自去年起已在全國19個縣市逐步推行。為了評估TPASS的實施效果及未來改進方向，我們進行了這次問卷調查。希望透過您的使用經驗，來幫助我們更好地理解TPASS的成效，並提出有效的改進策略。
+                <br><strong>請注意，本問卷對於每個居住地的調查份數有限，當達到限額後，問卷將顯示「已額滿」，屆時將無法填寫。您需要在名額內完成並提交有效的問卷，才能獲得禮券。</strong></p> 
+        </section>
 
-    <section class="survey">
-    <h2 style="font-size:18px"><img src="193221.png" alt="icon" width="23" height="20">各縣市調查問卷份數如下表所示:</h2>
-    <table border="1">
-        <tr style="height: 80px">
-            <td>臺北市、新北市、桃園市、臺中市、臺南市、高雄市</td>
-            <td>基隆市、新竹縣、新竹市、苗栗縣、彰化縣、屏東縣、宜蘭縣</td>
-            <td>南投縣、雲林縣、嘉義縣、嘉義市、花蓮縣、台東縣</td>
-        </tr>
-        <tr style="height: 50px;text-align: center">
-            <td>各250份</td>
-            <td>各150份</td>
-            <td>各100份</td>
-        </tr>
-    </table>
-    </section>
+        <section class="survey">
+            <h2><img src="193221.png" alt="icon" width="23" height="20"> 各縣市調查問卷份數如下表所示:</h2>
+            <table>
+                <tr>
+                    <th>縣市</th>
+                    <th>份數</th>
+                </tr>
+                <tr>
+                    <td>臺北市、新北市、桃園市、臺中市、臺南市、高雄市</td>
+                    <td>各250份</td>
+                </tr>
+                <tr>
+                    <td>基隆市、新竹縣、新竹市、苗栗縣、彰化縣、屏東縣、宜蘭縣</td>
+                    <td>各150份</td>
+                </tr>
+                <tr>
+                    <td>南投縣、雲林縣、嘉義縣、嘉義市、花蓮縣、台東縣</td>
+                    <td>各100份</td>
+                </tr>
+            </table>
+        </section>
 
-    <section class="link">
-    <h3 style="font-size:18px;"><img src="193221.png" alt="icon" width="23" height="20">各縣市問卷連結如下:</h3>
-    <p>臺北市:<a href="#">#</a></p>
-    <p>新北市:<a href="#">#</a></p>
-    <p>臺中市:<a href="#">#</a></p>
-    <p>臺南市:<a href="#">#</a></p>
-    <p>高雄市:<a href="#">#</a></p>
-    <p>基隆市:<a href="#">#</a></p>
-    <p>新竹縣:<a href="#">#</a></p>
-    <p>新竹市:<a href="#">#</a></p>
-    <p>苗栗縣:<a href="#">#</a></p>
-    <p>彰化縣:<a href="#">#</a></p>
-    <p>屏東縣:<a href="#">#</a></p>
-    <p>宜蘭縣:<a href="#">#</a></p>
-    <p>南投縣:<a href="#">#</a></p>
-    <p>雲林縣:<a href="#">#</a></p>
-    <p>嘉義縣:<a href="#">#</a></p>
-    <p>嘉義市:<a href="#">#</a></p>
-    <p>花蓮縣:<a href="#">#</a></p>
-    <p>臺東縣:<a href="#">#</a></p>
-    
-    
-    <img src="2024-08-09.png" style="width:550px; float: right;">
-    <br><br>
-    </section>
+        <section class="link">
+            <h3><img src="193221.png" alt="icon" width="23" height="20"> 各縣市問卷連結如下:</h3>
+            <p>臺北市: <a href="#">問卷連結</a></p>
+            <p>新北市: <a href="#">問卷連結</a></p>
+            <p>臺中市: <a href="#">問卷連結</a></p>
+            <p>臺南市: <a href="#">問卷連結</a></p>
+            <p>高雄市: <a href="#">問卷連結</a></p>
+            <p>基隆市: <a href="#">問卷連結</a></p>
+            <p>新竹縣: <a href="#">問卷連結</a></p>
+            <p>新竹市: <a href="#">問卷連結</a></p>
+            <p>苗栗縣: <a href="#">問卷連結</a></p>
+            <p>彰化縣: <a href="#">問卷連結</a></p>
+            <p>屏東縣: <a href="#">問卷連結</a></p>
+            <p>宜蘭縣: <a href="#">問卷連結</a></p>
+            <p>南投縣: <a href="#">問卷連結</a></p>
+            <p>雲林縣: <a href="#">問卷連結</a></p>
+            <p>嘉義縣: <a href="#">問卷連結</a></p>
+            <p>嘉義市: <a href="#">問卷連結</a></p>
+            <p>花蓮縣: <a href="#">問卷連結</a></p>
+            <p>臺東縣: <a href="#">問卷連結</a></p>
+        </section>
+
+        <img src="2024-08-09.png" style="width:550px" float :right;>
+
     </main>
 
-    
-    <footer style="background-color:#02C874;height:50px;">
+    <footer>
+        &copy; 2024 TPASS問卷調查. All rights reserved.
     </footer>
 </body>
 </html>
