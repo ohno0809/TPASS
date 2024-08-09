@@ -1,0 +1,34 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+.Preface{
+    padding:15px 30px;
+    margin:30px;  
+}
+
+.Preface h2{
+    display: flex;
+}
+
+.Preface img{
+    margin-right: 10px;
+}
+
+.survey{
+    padding:15px 30px;
+    margin:30px;  
+}
+
+.link{
+    padding:15px 30px;
+    margin:30px;
+}
+header{
+    height: 80px;
+    width: 100%;
+    padding:15px 30px;
+    margin:30px;  
+    text-align: center;  
+}
